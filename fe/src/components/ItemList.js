@@ -17,7 +17,7 @@ class ItemList extends Component {
         <tbody>
           {!products || products.length <= 0 ? (
             <tr>
-              <td scope="col" colSpan="6" align="center">
+              <td  colSpan="6" align="center">
                 <b>Oooo, No Product Here...</b>
               </td>
             </tr>
@@ -28,7 +28,6 @@ class ItemList extends Component {
                 <td>{product.name}</td>
                 <td>{product.subcategory_name}</td>
                 <td>{product.category}</td>
-
               </tr>
             ))
           )}

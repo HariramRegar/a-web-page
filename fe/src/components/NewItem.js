@@ -1,8 +1,8 @@
-import React, { Component, Fragment, useEffect, useState } from "react";
+import React, { Component} from "react";
 import axios from "../utilities/axios";
 
 
-class NewItem extends React.Component {
+class NewItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +11,6 @@ class NewItem extends React.Component {
       category: "",
       subcategory:"",
     };
-
     this.handleInputChange = this.handleInputChange.bind(this);
   }
 
@@ -25,25 +24,19 @@ class NewItem extends React.Component {
     });
   }
 
-//  const [products, setProducts]= useState([]);
-
   handleSubmit(event){
        event.preventDefault();
        const name=document.querySelector(".product__name");
        const subcategory = document.querySelector('.subcategory');
-       console.log(name);
-       console.log(subcategory);
-       const response = axios.post("/products/", {
+       axios.post("/products/", {
             name:name.value,
             subcategory:Number(subcategory.value),
          }
        );
-
   }
 
   render() {
     return (
-
       <form onSubmit={this.handleSubmit}>
       <table class="table table-bordered">
         <tbody>
