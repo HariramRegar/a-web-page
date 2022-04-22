@@ -1,5 +1,5 @@
 aniso8601==7.0.0
-Django==2.2.13
+Django==2.2.28
 django-graphiql==0.4.4
 django-rest-framework==0.1.0
 djangorestframework==3.11.0
